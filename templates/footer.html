@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}Drinks{% endblock %}
+
+{% block main %}
+
+<h1>Hello, {{ user }}!</h1>
+
+<h2>You like to drink:</h2>
+
+{% for drink in drinks %}
+    {% for link, value in drink.items() %}
+        <li><a href="{{ value }}">{{ link }}</a></li>
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

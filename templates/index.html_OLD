@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Hello, {{ user }}!</h1>
+    <h2>You like to drink:</h2>
+    {% for drink in drinks %}
+        {% for link, value in drink.items() %}
+        <li><a href="{{ value }}">{{ link }}</a></li>
+        {% endfor %}
+    {% endfor %}
+    {% block title %}{% endblock %}
+</body>
+</html>
